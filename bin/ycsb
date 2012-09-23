@@ -31,6 +31,7 @@ DATABASES = {
     "dynamodb"     : "com.yahoo.ycsb.db.DynamoDBClient",
     "elasticsearch": "com.yahoo.ycsb.db.ElasticSearchClient",
     "gemfire"      : "com.yahoo.ycsb.db.GemFireClient",
+    "asynchbase"   : "com.yahoo.ycsb.db.AsyncHBaseClient",
     "hbase"        : "com.yahoo.ycsb.db.HBaseClient",
     "hypertable"   : "com.yahoo.ycsb.db.HypertableClient",
     "infinispan"   : "com.yahoo.ycsb.db.InfinispanClient",
@@ -39,7 +40,7 @@ DATABASES = {
     "mongodb"      : "com.yahoo.ycsb.db.MongoDbClient",
     "nosqldb"      : "com.yahoo.ycsb.db.NoSqlDbClient",
     "orientdb"     : "com.yahoo.ycsb.db.OrientDBClient",
-    "redis"        : "com.yahoo.ycsb.db.RedisClient", 
+    "redis"        : "com.yahoo.ycsb.db.RedisClient",
     "voldemort"    : "com.yahoo.ycsb.db.VoldemortClient",
 }
 

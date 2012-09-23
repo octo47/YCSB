@@ -40,7 +40,7 @@
       <version>1.6.4</version>
     </dependency>
   </dependencies>
- 
+
   <!-- Properties Management -->
   <properties>
     <maven.assembly.version>2.2.1</maven.assembly.version>
@@ -63,6 +63,7 @@
     <module>cassandra</module>
     <module>core</module>
     <module>hbase</module>
+    <!--<module>asynchbase</module>-->
     <module>hypertable</module>
     <module>dynamodb</module>
     <module>elasticsearch</module>
