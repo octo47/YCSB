@@ -104,10 +104,11 @@ public class AsyncHBaseClient extends com.yahoo.ycsb.DB {
    * @return Zero on success, a non-zero error code on error
    */
   public int read(String table, String key, Set<String> fields, HashMap<String, ByteIterator> result) {
+    GetRequest req = new GetRequest(table, key)
+            .family(_columnFamilyBytes);
     byte[][] qualifiers = fieldsToQualifiers(fields);
-    final GetRequest req = new GetRequest(table, key)
-            .family(_columnFamilyBytes)
-            .qualifiers(qualifiers);
+    if (qualifiers != null)
+            req = req.qualifiers(qualifiers);
 
     try {
       if (_debug) {
@@ -132,6 +133,8 @@ public class AsyncHBaseClient extends com.yahoo.ycsb.DB {
   }
 
   private byte[][] fieldsToQualifiers(Set<String> fields) {
+    if (fields == null)
+      return null;
     byte[][] qualifiers = new byte[fields.size()][];
     int idx = 0;
     for (String field : fields) {
