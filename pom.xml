@@ -63,7 +63,7 @@
     <module>cassandra</module>
     <module>core</module>
     <module>hbase</module>
-    <!--<module>asynchbase</module>-->
+    <module>asynchbase</module>
     <module>hypertable</module>
     <module>dynamodb</module>
     <module>elasticsearch</module>
